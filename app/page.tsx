@@ -14,9 +14,9 @@ export default function Home() {
         <Appbar/>
         <SpotlightPreview/>
         <SpotlightNewDemo/>
-        <SparklesPreview/>
         <VortexDemo/>
         <TimelineDemo/>
+        <SparklesPreview/>
         <AuroraBackgroundDemo/>
       </div>
     </div>
