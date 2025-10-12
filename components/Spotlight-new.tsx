@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "./ui/spotlight";
 import Button, { Button2 } from "./Button";
+import { LayoutTextFlipDemo } from "./TextFlip";
 
 export function SpotlightPreview() {
   return (
@@ -19,19 +20,22 @@ export function SpotlightPreview() {
       />
 
       <div className="relative z-10 col-span-1 md:col-span-1 flex flex-col items-start justify-center p-4 pl-8 md:pl-16 pt-20 md:pt-0">
-        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-left text-6xl font-bold text-transparent md:text-8xl">
-          Hi, I'm Kshitiz
-        </h1>
+        <div className="text-6xl">
+        <LayoutTextFlipDemo/>
+        </div>
         <p className="mt-4 max-w-lg text-left text-xl font-normal text-neutral-300">
           Engineering future-ready platforms with precision, performance, and purpose.
           Leveraging full-stack technologies and DevOps workflows to deliver reliability at every layer.
         </p>
         <div className="pt-8 flex flex-wrap gap-4 sm:gap-6">
+          <a href="https://www.linkedin.com/in/kshitiz-prakash-srivastava-a9b797256/" target="_blank">
           <Button2
-            className="bg-blue-600 hover:bg-blue-700 border-blue-600 hover:border-blue-700 text-white"
+          
+          className="bg-blue-600 hover:bg-blue-700 border-blue-600 hover:border-blue-700 text-white"
           >
             Let's Connect
           </Button2>
+            </a>
           <a target="_blank"
             rel="noopener noreferrer"
             href="https://drive.google.com/file/d/1x__b7KUlDRL8Z45Yk9f9Yrkv3XNjup5d/view?usp=sharing">

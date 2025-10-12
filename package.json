@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tabler/icons-react": "^3.35.0",
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
@@ -21,6 +22,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-element-to-jsx-string": "^17.0.1",
+    "react-hot-toast": "^2.6.0",
     "react-scroll": "^1.9.3",
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^3.3.1"
