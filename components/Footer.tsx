@@ -39,7 +39,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer id='footer' className="bg-gray-900">
+    <footer id='footer' className="bg-stone-950 border-t">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div id='footer' className="flex flex-col items-center space-y-8">
           <h2 className="text-2xl font-bold text-white">Connect With Me</h2>

@@ -140,20 +140,20 @@ export function SpotlightNewDemo() {
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold text-neutral-100 flex items-center gap-3">
                   <span className="text-4xl"></span>
-                  My Story
+                  💻 My Story
                 </h3>
                 <div className="space-y-5 text-neutral-300 text-lg leading-relaxed">
                   <p>
                     Hey! I'm a Full Stack Developer from Noida who gets a kick out of building stuff that just works — web apps that don't crash, AI agents that actually do things, and infrastructure that laughs at chaos.
                   </p>
                   <p>
-                    I've been known to chase bugs at 2 AM, containerize literally everything, and turn caffeine into clean code ☕💻. Learning new tech? Bring it on — I dive in headfirst, figure it out, and probably have fun doing it.
+                    I've been known to chase bugs at 2 AM, containerize literally everything, and turn caffeine into clean code . Learning new tech? Bring it on — I dive in headfirst, figure it out, and probably have fun doing it.
                   </p>
                   <p>
                     When I'm not debugging or optimizing workflows, you'll find me experimenting with AI tools, diving deep into DevOps trends, contributing to open-source projects, or probably brewing another cup of coffee. I believe great software is built on clean code, solid architecture, endless curiosity, and just the right amount of caffeine.
                   </p>
                   <p className="text-xl font-semibold text-neutral-100">
-                    If you want someone who writes solid code, experiments with the latest tools, and isn't afraid to tackle the tricky stuff with a grin, you've found your person 🚀
+                    If you want someone who writes solid code, experiments with the latest tools, and isn't afraid to tackle the tricky stuff with a grin, you've found your person 
                   </p>
                 </div>
               </div>

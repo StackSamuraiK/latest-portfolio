@@ -1,51 +1,80 @@
 "use client"
 
 import { InstagramIcon, Mail, Phone, Send } from 'lucide-react';
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 export const Contact = () => {
-    //@ts-ignore
-    const form = useRef();
-    const sendEmail = (e: any) => {
-        e.preventDefault();
+    const [formData, setFormData] = useState({
+        from_name: '',
+        from_email: '',
+        message: ''
+    });
+    const [loading, setLoading] = useState(false);
 
-        emailjs
-            //@ts-ignore
-            .sendForm('service_jbe9t2i', 'template_56cwa1b', form.current, {
-                publicKey: 'vcLreP6NBrN3jh1AS',
-            })
-            .then(
-                () => {
-                    toast.success('Message sent successfully!', {
-                        style: {
-                            background: '#18181b',
-                            color: '#fff',
-                            border: '1px solid #3f3f46'
-                        },
-                        iconTheme: {
-                            primary: '#3b82f6',
-                            secondary: '#18181b'
-                        }
-                    });
-                    // @ts-ignore
-                    form.current.reset();
+    const handleChange = (e: any) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const sendEmail = async (e: any) => {
+        e.preventDefault();
+        setLoading(true);
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
-                () => {
-                    toast.error('Failed to send message. Please try again.', {
-                        style: {
-                            background: '#18181b',
-                            color: '#fff',
-                            border: '1px solid #3f3f46'
-                        },
-                        iconTheme: {
-                            primary: '#ef4444',
-                            secondary: '#18181b'
-                        }
-                    });
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                toast.success('Message sent successfully!', {
+                    style: {
+                        background: '#18181b',
+                        color: '#fff',
+                        border: '1px solid #3f3f46'
+                    },
+                    iconTheme: {
+                        primary: '#3b82f6',
+                        secondary: '#18181b'
+                    }
+                });
+                setFormData({ from_name: '', from_email: '', message: '' });
+            } else {
+                toast.error(data.error || 'Failed to send message. Please try again.', {
+                    style: {
+                        background: '#18181b',
+                        color: '#fff',
+                        border: '1px solid #3f3f46'
+                    },
+                    iconTheme: {
+                        primary: '#ef4444',
+                        secondary: '#18181b'
+                    }
+                });
+            }
+        } catch (error) {
+            toast.error('Failed to send message. Please try again.', {
+                style: {
+                    background: '#18181b',
+                    color: '#fff',
+                    border: '1px solid #3f3f46'
                 },
-            );
+                iconTheme: {
+                    primary: '#ef4444',
+                    secondary: '#18181b'
+                }
+            });
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -100,15 +129,15 @@ export const Contact = () => {
                     </div>
 
                     <div className="bg-zinc-900/50 p-8 rounded-2xl backdrop-blur-sm border border-zinc-800/50">
-                        <script src='https://smtpjs.com/v3/smtp.js'></script>
-                        <form
-                            //@ts-ignore
-                            ref={form} onSubmit={sendEmail} className="space-y-6">
+                        <form onSubmit={sendEmail} className="space-y-6">
                             <div>
                                 <input
                                     type="text"
                                     placeholder="Your Name"
                                     name='from_name'
+                                    value={formData.from_name}
+                                    onChange={handleChange}
+                                    required
                                     className="w-full bg-zinc-800/50 border border-zinc-700/50 rounded-lg px-4 py-3 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500 transition-colors"
                                 />
                             </div>
@@ -117,6 +146,9 @@ export const Contact = () => {
                                     type="email"
                                     placeholder="Your Email"
                                     name='from_email'
+                                    value={formData.from_email}
+                                    onChange={handleChange}
+                                    required
                                     className="w-full bg-zinc-800/50 border border-zinc-700/50 rounded-lg px-4 py-3 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500 transition-colors"
                                 />
                             </div>
@@ -125,14 +157,18 @@ export const Contact = () => {
                                     placeholder="Your Message"
                                     rows={4}
                                     name='message'
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
                                     className="w-full bg-zinc-800/50 border border-zinc-700/50 rounded-lg px-4 py-3 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                                 ></textarea>
                             </div>
                             <button
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
+                                disabled={loading}
+                                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                <span>Send Message</span>
+                                <span>{loading ? 'Sending...' : 'Send Message'}</span>
                                 <Send className="w-4 h-4" />
                             </button>
                         </form>

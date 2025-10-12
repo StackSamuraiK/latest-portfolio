@@ -187,11 +187,7 @@ export function TimelineDemo() {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
           </div>
-          <a
-            href="https://speckle-fine-06c.notion.site/My-Projects-286bb6fe4b2280ec9ecfe255e5e1687c"
-            target="_blank"
-            className="cursor-pointer"
-          >
+          <a href="https://speckle-fine-06c.notion.site/My-Projects-286bb6fe4b2280ec9ecfe255e5e1687c" target="_blank">
             <div className="pt-10 flex justify-end">
               <GlowingBorderButton className="text-base md:text-lg font-bold">
                 <span className="flex items-center gap-3">
@@ -201,7 +197,6 @@ export function TimelineDemo() {
               </GlowingBorderButton>
             </div>
           </a>
-
         </div>
       ),
     },
