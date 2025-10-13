@@ -1,25 +1,13 @@
 "use client";
 import React from "react";
-import { SparklesCore } from "./ui/sparkles";
+import { Spotlight } from "@/components/ui/spotlight-new";
 import { Services } from "./Services";
 
-export function SparklesPreview() {
+export function SpotlightNewDemo2() {
   return (
-    <div className=" relative w-full bg-black flex flex-col items-center justify-center overflow-hidden">
-      <div className="w-full absolute inset-0 h-full">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
-      <div className="relative z-20 w-full">
-        <Services/>
-      </div>
+    <div className="w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <Spotlight />
+      <Services/>
     </div>
   );
 }

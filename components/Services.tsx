@@ -1,5 +1,6 @@
 import { Code2, Database, Cloud, Cpu, Shield, Rocket } from 'lucide-react';
 import { ServiceCard } from './ui/services-card';
+import { Spotlight } from './ui/spotlight-new';
 
 export function Services() {
     const services = [
@@ -37,6 +38,7 @@ export function Services() {
 
     return (
         <section id="services" className="relative py-32">
+            <Spotlight/>
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">

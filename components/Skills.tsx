@@ -1,5 +1,4 @@
 import React from 'react';
-import { TypewriterEffectSmoothDemo } from './TypeWriter';
 
 interface Skill {
   name: string;
@@ -34,29 +33,31 @@ const SkillsCarousel: React.FC = () => {
     { name: 'Webpack', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg' },
     { name: 'Jest', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg' },
     { name: 'GitLab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg' },
+    { name: 'Cloudflare', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg' },
+    { name: 'Vercel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg' },
+    { name: 'Vue.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
+    { name: 'Angular', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg' },
+    { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'Terraform', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg' },
+    { name: 'Jenkins', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg' },
+    { name: 'GraphQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg' },
   ];
 
-  // Split skills into two arrays
+  // Split skills into two arrays for dual carousel
   const midPoint = Math.ceil(allSkills.length / 2);
   const firstHalf = allSkills.slice(0, midPoint);
   const secondHalf = allSkills.slice(midPoint);
 
-  // Duplicate for seamless infinite scroll
-  const duplicatedFirstHalf = [...firstHalf, ...firstHalf];
-  const duplicatedSecondHalf = [...secondHalf, ...secondHalf];
+  // Triple duplication for seamless infinite scroll across wider screens
+  const duplicatedFirstHalf = [...firstHalf, ...firstHalf, ...firstHalf];
+  const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf];
 
   return (
-    <div className="w-full min-h-screen bg-transparent flex items-center justify-center py-20 px-4">
-      <div className="max-w-7xl w-full">
-       <TypewriterEffectSmoothDemo />
-
+    <div className="w-full bg-transparent py-12 px-0">
+      <div className="w-full">
         <div className="space-y-8">
           {/* First Carousel - Moving Forward */}
           <div className="relative overflow-hidden">
-            {/* Gradient overlays */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
-
             {/* Scrolling container */}
             <div className="flex animate-scroll-forward gap-12">
               {duplicatedFirstHalf.map((skill, idx) => (
@@ -90,10 +91,6 @@ const SkillsCarousel: React.FC = () => {
 
           {/* Second Carousel - Moving Backward (Reverse) */}
           <div className="relative overflow-hidden">
-            {/* Gradient overlays */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
-
             {/* Scrolling container */}
             <div className="flex animate-scroll-backward gap-12">
               {duplicatedSecondHalf.map((skill, idx) => (
@@ -133,13 +130,13 @@ const SkillsCarousel: React.FC = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-33.333%);
           }
         }
         
         @keyframes scrollBackward {
           0% {
-            transform: translateX(-50%);
+            transform: translateX(-33.333%);
           }
           100% {
             transform: translateX(0);
@@ -147,11 +144,11 @@ const SkillsCarousel: React.FC = () => {
         }
         
         .animate-scroll-forward {
-          animation: scrollForward 30s linear infinite;
+          animation: scrollForward 40s linear infinite;
         }
         
         .animate-scroll-backward {
-          animation: scrollBackward 25s linear infinite;
+          animation: scrollBackward 35s linear infinite;
         }
         
         .animate-scroll-forward:hover,

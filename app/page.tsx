@@ -1,11 +1,14 @@
 import Appbar from "@/components/Appbar";
 import { Contact } from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { SparklesPreview } from "@/components/Sparkels";
-import { SpotlightNewDemo } from "@/components/Spotlight";
+import { SpotlightNewDemo2 } from "@/components/Sparkels";
+// import { SparklesPreview } from "@/components/Sparkels";
 import { SpotlightPreview } from "@/components/Spotlight-new";
 import { TimelineDemo } from "@/components/Timeline";
-import { VortexDemo } from "@/components/Vortex";
+import { SpotlightPreview2 } from "@/components/Tech";
+import ModernSkillsCard from "@/components/Spotlight";
+
+
 
 
 
@@ -15,10 +18,12 @@ export default function Home() {
       <div>
         <Appbar/>
         <SpotlightPreview/>
-        <SpotlightNewDemo/>
+        <ModernSkillsCard/>
         <TimelineDemo/>
-        <VortexDemo/>
-        <SparklesPreview/>
+        {/* <VortexDemo/> */}
+        {/* <SparklesPreview/> */}
+        <SpotlightPreview2/>
+        <SpotlightNewDemo2/>
         <Contact/>
         <Footer/>
       </div>
