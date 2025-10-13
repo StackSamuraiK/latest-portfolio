@@ -52,11 +52,11 @@ export function SpotlightPreview() {
         </div>
       </div>
 
-      <div className="relative z-10 col-span-1 flex items-center justify-start p-4 pl-0 md:pl-8">
+      <div className="relative z-10 col-span-1 flex items-center justify-center p-4 pl-0 md:pl-8">
         <img
           src="images/hero-picture.png"
           alt="Profile"
-          className="rounded-2xl object-cover border border-gray-700 w-200 h-150 shadow-lg shadow-black/20"
+          className="rounded-xl object-cover border border-gray-700 w-200 h-150 shadow-lg shadow-black/20"
         />
       </div>
     </div>
