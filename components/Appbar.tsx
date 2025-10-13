@@ -24,7 +24,6 @@ export const Appbar = () => {
         { to: "projects", label: "Projects", offset: -50 },
         { to: "services", label: "Services", offset: -50 },
         { to: "contact", label: "Contact", offset: -50 },
-        { to: "footer", label: "Footer", offset: -50 },
     ];
 
     const socialLinks = [

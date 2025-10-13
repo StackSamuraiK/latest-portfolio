@@ -11,7 +11,7 @@ export default function ModernSkillsCard() {
   ];
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center p-8 md:p-16">
+    <div id='about' className="w-full min-h-screen flex items-center justify-center p-8 md:p-16">
       <div className="w-full max-w-7xl">
         {/* Header Section - Split Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-center">
