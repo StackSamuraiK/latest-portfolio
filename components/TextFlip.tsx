@@ -8,7 +8,7 @@ export function LayoutTextFlipDemo() {
       <motion.div className="relative mx-4 my-4 flex flex-col items-center justify-center gap-4 text-center sm:mx-0 sm:mb-0 sm:flex-row">
         <LayoutTextFlip
           text="Hi, I'm"
-          words={["Kshitiz", "FullStack Dev", "DevOps Engineer", "Cracked Dev"]}
+          words={["Kshitiz Srivastav", "FullStack Dev", "DevOps Engineer", "Cracked Dev"]}
         />
       </motion.div>
     </div>
