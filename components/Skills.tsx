@@ -53,25 +53,25 @@ const SkillsCarousel: React.FC = () => {
   const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf];
 
   return (
-    <div className="w-full bg-transparent py-12 px-0">
+    <div className="w-full bg-transparent py-6 sm:py-8 md:py-12 px-0">
       <div className="w-full">
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 md:space-y-8">
           {/* First Carousel - Moving Forward */}
           <div className="relative overflow-hidden">
             {/* Scrolling container */}
-            <div className="flex animate-scroll-forward gap-12">
+            <div className="flex animate-scroll-forward gap-6 sm:gap-8 md:gap-10 lg:gap-12">
               {duplicatedFirstHalf.map((skill, idx) => (
                 <div
                   key={`forward-${skill.name}-${idx}`}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="flex flex-col items-center justify-center p-8 transition-all duration-500 hover:scale-125">
+                  <div className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8 transition-all duration-500 hover:scale-125">
                     <div className="relative">
                       {/* Glow effect on hover */}
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                      {/* Logo container */}
-                      <div className="relative w-20 h-20 flex items-center justify-center">
+                      {/* Logo container - responsive sizes */}
+                      <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
                         <img
                           src={skill.logo}
                           alt={skill.name}
@@ -80,7 +80,7 @@ const SkillsCarousel: React.FC = () => {
                       </div>
                     </div>
 
-                    <p className="text-sm font-medium text-gray-500 group-hover:text-white transition-all duration-300 mt-4 opacity-0 group-hover:opacity-100">
+                    <p className="text-xs sm:text-sm font-medium text-gray-500 group-hover:text-white transition-all duration-300 mt-2 sm:mt-3 md:mt-4 opacity-0 group-hover:opacity-100">
                       {skill.name}
                     </p>
                   </div>
@@ -92,19 +92,19 @@ const SkillsCarousel: React.FC = () => {
           {/* Second Carousel - Moving Backward (Reverse) */}
           <div className="relative overflow-hidden">
             {/* Scrolling container */}
-            <div className="flex animate-scroll-backward gap-12">
+            <div className="flex animate-scroll-backward gap-6 sm:gap-8 md:gap-10 lg:gap-12">
               {duplicatedSecondHalf.map((skill, idx) => (
                 <div
                   key={`backward-${skill.name}-${idx}`}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="flex flex-col items-center justify-center p-8 transition-all duration-500 hover:scale-125">
+                  <div className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8 transition-all duration-500 hover:scale-125">
                     <div className="relative">
                       {/* Glow effect on hover */}
                       <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                      {/* Logo container */}
-                      <div className="relative w-20 h-20 flex items-center justify-center">
+                      {/* Logo container - responsive sizes */}
+                      <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
                         <img
                           src={skill.logo}
                           alt={skill.name}
@@ -113,7 +113,7 @@ const SkillsCarousel: React.FC = () => {
                       </div>
                     </div>
 
-                    <p className="text-sm font-medium text-gray-500 group-hover:text-white transition-all duration-300 mt-4 opacity-0 group-hover:opacity-100">
+                    <p className="text-xs sm:text-sm font-medium text-gray-500 group-hover:text-white transition-all duration-300 mt-2 sm:mt-3 md:mt-4 opacity-0 group-hover:opacity-100">
                       {skill.name}
                     </p>
                   </div>
@@ -144,11 +144,32 @@ const SkillsCarousel: React.FC = () => {
         }
         
         .animate-scroll-forward {
-          animation: scrollForward 40s linear infinite;
+          animation: scrollForward 20s linear infinite;
         }
         
         .animate-scroll-backward {
-          animation: scrollBackward 35s linear infinite;
+          animation: scrollBackward 18s linear infinite;
+        }
+
+        /* Responsive animation speeds */
+        @media (min-width: 640px) {
+          .animate-scroll-forward {
+            animation: scrollForward 30s linear infinite;
+          }
+          
+          .animate-scroll-backward {
+            animation: scrollBackward 27s linear infinite;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .animate-scroll-forward {
+            animation: scrollForward 40s linear infinite;
+          }
+          
+          .animate-scroll-backward {
+            animation: scrollBackward 35s linear infinite;
+          }
         }
         
         .animate-scroll-forward:hover,
