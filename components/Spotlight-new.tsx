@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "./ui/spotlight";
-import Button, { Button2 } from "./Button";
+import Button, { Button2, GithubIcon } from "./Button";
 import { LayoutTextFlipDemo } from "./TextFlip";
 
 export function SpotlightPreview() {
@@ -45,14 +45,15 @@ export function SpotlightPreview() {
           Leveraging full-stack technologies and DevOps workflows to deliver reliability at every layer.
         </p>
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 md:gap-6 w-full sm:w-auto">
-          <a href="https://www.linkedin.com/in/kshitiz-prakash-srivastava-a9b797256/" target="_blank" className="w-full sm:w-auto">
+          <a href="https://github.com/StackSamuraiK/" target="_blank" className="w-full sm:w-auto">
             <Button2
+              icon={<GithubIcon />}
               className="bg-blue-600 hover:bg-blue-700 border-blue-600 hover:border-blue-700 text-white w-full sm:w-auto"
             >
-              Let's Connect
+            Browse Repos
             </Button2>
           </a>
-          <a 
+          <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://drive.google.com/file/d/1x__b7KUlDRL8Z45Yk9f9Yrkv3XNjup5d/view?usp=sharing"
