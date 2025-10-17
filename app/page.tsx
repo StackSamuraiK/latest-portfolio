@@ -2,7 +2,6 @@ import Appbar from "@/components/Appbar";
 import { Contact } from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { SpotlightNewDemo2 } from "@/components/Sparkels";
-// import { SparklesPreview } from "@/components/Sparkels";
 import { SpotlightPreview } from "@/components/Spotlight-new";
 import { TimelineDemo } from "@/components/Timeline";
 import { SpotlightPreview2 } from "@/components/Tech";
@@ -18,8 +17,8 @@ export default function Home() {
       <div>
         <Appbar/>
         <SpotlightPreview/>
-        <ModernSkillsCard/>
         <TimelineDemo/>
+        <ModernSkillsCard/>
         {/* <VortexDemo/> */}
         {/* <SparklesPreview/> */}
         <SpotlightPreview2/>
