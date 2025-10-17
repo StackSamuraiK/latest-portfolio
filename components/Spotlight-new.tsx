@@ -1,10 +1,19 @@
+"use client"
+
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "./ui/spotlight";
-import Button, { Button2, GithubIcon } from "./Button";
+import Button, { Button2, GithubIcon, ScrollCTAButton } from "./Button";
 import { LayoutTextFlipDemo } from "./TextFlip";
 
 export function SpotlightPreview() {
+  const handleScrollToFooter = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div id="home" className="relative grid grid-cols-1 md:grid-cols-3 min-h-screen w-full overflow-hidden rounded-md bg-black/[0.96] antialiased">
       <div
@@ -64,6 +73,7 @@ export function SpotlightPreview() {
             </Button>
           </a>
         </div>
+        <ScrollCTAButton onClick={handleScrollToFooter} />
       </div>
     </div>
   );

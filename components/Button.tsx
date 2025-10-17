@@ -50,6 +50,29 @@ export function Button2({ children, className = "", onClick, type = "button", ic
     );
 }
 
+
+export function ScrollCTAButton({ children = "Let's get in touch", className = "", onClick }: { children?: React.ReactNode; className?: string; onClick?: () => void }) {
+    return (
+        <div className="flex justify-center py-6 sm:py-8">
+            <button
+                onClick={onClick}
+                className={`group relative inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-5 py-2.5 text-xs sm:text-sm font-medium text-neutral-700 transition-all duration-300 hover:bg-neutral-100 hover:border-neutral-300 hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-300 focus:ring-offset-2 active:scale-95 ${className}`}
+            >
+                {children}
+                <svg 
+                    className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-y-0.5 rtl:rotate-180" 
+                    aria-hidden="true" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 14 10"
+                >
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+            </button>
+        </div>
+    );
+}
+
 export function GithubIcon() {
     return (
         <svg 
