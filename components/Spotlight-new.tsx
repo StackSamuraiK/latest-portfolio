@@ -65,7 +65,7 @@ export function SpotlightPreview() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1O57-_U4_tBdbXnCmmg0m-T7G-mM79B69/view?usp=sharing"
+            href="https://drive.google.com/file/d/1wNMlOA1x7l5km0OheKAPChu0S2zRkWeh/view?usp=sharing"
             className="w-full sm:w-auto"
           >
             <Button className="border-blue-400 hover:border-blue-500 bg-blue-400/5 hover:bg-blue-400/10 backdrop-blur-sm w-full sm:w-auto">
