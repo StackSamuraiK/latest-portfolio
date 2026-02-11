@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "./ui/spotlight";
 import Button, { Button2, GithubIcon, ScrollCTAButton } from "./Button";
 import { LayoutTextFlipDemo } from "./TextFlip";
+import { motion } from "motion/react"
 
 export function SpotlightPreview() {
   const handleScrollToFooter = () => {
@@ -29,13 +30,20 @@ export function SpotlightPreview() {
       />
 
       {/* Image Section - Shows at top on mobile, right side on desktop */}
-      <div className="relative z-10 col-span-1 flex items-center justify-center md:justify-center p-4 px-4 sm:px-6 md:pl-8 pt-20 pb-6 md:pt-0 md:pb-0 order-1 md:order-2">
-        <img
-          src="images/hero-picture.png"
-          alt="Profile"
-          className="rounded-xl object-cover border border-gray-700 w-full max-w-[240px] sm:max-w-[280px] md:max-w-none md:w-full h-auto aspect-[4/5] shadow-lg shadow-black/20"
-        />
-      </div>
+      <motion.div
+        className="relative z-10 col-span-1 flex items-center justify-center md:justify-center p-4 px-4 sm:px-6 md:pl-8 pt-20 pb-6 md:pt-0 md:pb-0 order-1 md:order-2"
+        whileHover={{ y: -12, scale: 1.02, rotate: 2 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      >
+        <div className="relative group rounded-[2rem] overflow-hidden">
+          <div className="absolute -inset-1 bg-gradient-to-r from-zinc-500 to-slate-700 rounded-[2.5rem] blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+          <img
+            src="images/hero-picture.png"
+            alt="Profile"
+            className="relative rounded-[2rem] object-cover border-2 border-white/10 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] md:w-full h-auto aspect-[3/4] shadow-[0_0_40px_-10px_rgba(0,0,0,0.5)] shadow-zinc-500/20 scale-110"
+          />
+        </div>
+      </motion.div>
 
       {/* Content Section */}
       <div className="relative z-10 col-span-1 md:col-span-2 flex flex-col items-start justify-center p-4 px-4 sm:px-6 md:pl-16 pt-6 pb-8 md:pt-0 md:pb-0 order-2 md:order-1">
@@ -59,7 +67,7 @@ export function SpotlightPreview() {
               icon={<GithubIcon />}
               className="bg-blue-600 hover:bg-blue-700 border-blue-600 hover:border-blue-700 text-white w-full sm:w-auto"
             >
-            Browse Repos
+              Browse Repos
             </Button2>
           </a>
           <a
