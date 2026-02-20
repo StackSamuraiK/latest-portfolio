@@ -12,7 +12,7 @@ export function TimelineDemo() {
             <span>
               Build full-stack mobile apps in minutes — with a browser-based VS Code and AI co-pilot that writes, debugs, and improves your code while you sip coffee ☕.
             </span>
-            <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors" href="https://drive.google.com/file/d/1yOs6EgcJhO2tQs13hmpP2hE1O3YHtWHy/view?usp=sharing" target="_blank">
+            <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors" href="https://nexus-chi-murex.vercel.app/" target="_blank">
               Live Preview
             </a>
           </p>
@@ -27,7 +27,7 @@ export function TimelineDemo() {
               ✅ AI co-pilot on steroids — writes, debugs, and improves while you sip coffee.
             </div>
           </div>
-          <a href="https://drive.google.com/file/d/1yOs6EgcJhO2tQs13hmpP2hE1O3YHtWHy/view?usp=sharing" target="_blank">
+          <a href="https://nexus-chi-murex.vercel.app/" target="_blank">
             <div className="grid grid-cols-2 gap-4">
               <img
                 src="/images/nexus1.png"
