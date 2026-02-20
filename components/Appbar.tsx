@@ -21,7 +21,7 @@ export const Appbar = () => {
     const menuItems = [
         { to: "home", label: "Home", offset: -150 },
         { to: "projects", label: "Projects", offset: -50 },
-        { to: "about", label: "About", offset: -50 },
+        { to: "experience", label: "Experiences", offset: -50 },
         { to: "services", label: "Services", offset: -50 },
         { to: "contact", label: "Contact", offset: -50 },
     ];
