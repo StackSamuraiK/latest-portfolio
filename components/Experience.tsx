@@ -15,7 +15,7 @@ export default function Experience() {
                   <svg className="w-3 h-3 text-fg-brand-strong" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
               </span>
               <time className="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">December 19th, 2025</time>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-heading my-2"> <b>MPencil</b>  - Software Quality Analyst <span><i className='text-zinc-500 ml-2'>(Intern)</i></span> <span className="ms-2 bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded">Current</span></h3>
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-heading my-2"> <b>MPencil</b>  - Software Quality Analyst <span className="ms-2 bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded">Current</span></h3>
                 <ul className="list-disc ml-5 space-y-1">
                     <li>Automated end-to-end test cases using Cypress.</li>
                     <li>Identified and reported bugs with detailed documentation.</li>
@@ -31,7 +31,7 @@ export default function Experience() {
                   <svg className="w-3 h-3 text-fg-brand-strong" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
               </span>
               <time className="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">March 19th, 2025 - October 15th 2025</time>
-              <h3 className="my-2 text-lg font-semibold text-heading">Orange Essence Technology</h3>
+              <h3 className="my-2 text-lg font-semibold text-heading"><b>Orange Essence Technology</b> - Full Stack Web Developer</h3>
                 <ul className="list-disc ml-5 space-y-1">
                     <li>Built the backend architecture for an online doctor booking platform from scratch, including authentication, appointments, and role-based access.</li>
                     <li>Developed a real-time chat system similar to WhatsApp for seamless doctor-patient communication.</li>
@@ -48,7 +48,7 @@ export default function Experience() {
                   <svg className="w-3 h-3 text-fg-brand-strong" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
               </span>
               <time className="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">February 6th, 2025 - March 6th 2025</time>
-              <h3 className="my-2 text-lg font-semibold text-heading">Weld and Metal Fabrications</h3>
+              <h3 className="my-2 text-lg font-semibold text-heading"><b>Weld and Metal Fabrications</b> - Backend Developer</h3>
                 <ul className="list-disc ml-5 space-y-1">
                     <li>Migrated cloud storage from AWS S3 to Filebase (S3-compatible object storage), improving cost efficiency and scalability.</li>
                     <li>Integrated Razorpay payment gateway with a custom checkout flow for secure online payments.</li>

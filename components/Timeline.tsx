@@ -27,7 +27,7 @@ export function TimelineDemo() {
               ✅ AI co-pilot on steroids — writes, debugs, and improves while you sip coffee.
             </div>
           </div>
-          <a href="https://nexus-chi-murex.vercel.app/" target="_blank">
+          <a href="https://nexus.horizonlab.in/" target="_blank">
             <div className="grid grid-cols-2 gap-4">
               <img
                 src="/images/nexus1.png"
@@ -85,7 +85,7 @@ export function TimelineDemo() {
               ✅ Smart code, zero headaches — clean, optimized, ready-to-go websites every time.
             </div>
           </div>
-          <a href="http://blitz-new.vercel.app/" target="_blank">
+          <a href="http://blitz.horizonlab.in/" target="_blank">
             <div className="grid grid-cols-2 gap-4">
               <img
                 src="/images/blitz1.png"
@@ -132,15 +132,15 @@ export function TimelineDemo() {
               <span className="flex items-center gap-2">
                 ✅ AI Lesson Plan Generator
               </span>
-              <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors text-xs md:text-sm" href="https://ai-lesson-plan-generator.vercel.app/" target="_blank">
+              <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors text-xs md:text-sm" href="https://lesson-planner.horizonlab.in/" target="_blank">
                 Live Preview
               </a>
             </div>
             <div className="flex items-center justify-between gap-4 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
               <span className="flex items-center gap-2">
-                ✅ Calendly- Your Friendly Calender
+                ✅ StreamTube - Video uploading and streaming platform
               </span>
-              <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors text-xs md:text-sm" href="https://goole-cal.vercel.app/" target="_blank">
+              <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors text-xs md:text-sm" href="https://video-streaming-platform-liard.vercel.app/" target="_blank">
                 Live Preview
               </a>
             </div>
@@ -154,15 +154,15 @@ export function TimelineDemo() {
             </div>
             <div className="flex items-center justify-between gap-4 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
               <span className="flex items-center gap-2">
-                ✅ PayWave- Digital Wallet
+                ✅ Portfolio Dashboard - Real-Time Stock Insights Dashboard 
               </span>
-              <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors text-xs md:text-sm" href="https://paytm-chi-six.vercel.app/" target="_blank">
+              <a className="text-violet-500 underline whitespace-nowrap font-medium hover:text-violet-400 transition-colors text-xs md:text-sm" href="https://portfolio-dashboard-wine-one.vercel.app/" target="_blank">
                 Live Preview
               </a>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <a href="https://ai-lesson-plan-generator.vercel.app/" target="_blank">
+            <a href="https://lesson-planner.horizonlab.in/" target="_blank">
               <img
                 src="/images/lesson.png"
                 alt="hero template"
@@ -171,9 +171,9 @@ export function TimelineDemo() {
                 className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
               />
             </a>
-            <a href="https://goole-cal.vercel.app/" target="_blank">
+            <a href="https://video-streaming-platform-liard.vercel.app/" target="_blank">
               <img
-                src="/images/cal.png"
+                src="/images/tube.png"
                 alt="feature template"
                 width={500}
                 height={500}
@@ -189,9 +189,9 @@ export function TimelineDemo() {
                 className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
               />
             </a>
-            <a href="https://paytm-chi-six.vercel.app/" target="_blank">
+            <a href="https://portfolio-dashboard-wine-one.vercel.app/" target="_blank">
               <img
-                src="/images/paytm.png"
+                src="/images/portfolio.png"
                 alt="cards template"
                 width={500}
                 height={500}

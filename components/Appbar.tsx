@@ -113,7 +113,7 @@ export const Appbar = () => {
                 : 'translate-x-full opacity-0 pointer-events-none'
                 }`}>
                 {/* Full opaque background - COMPLETELY SOLID */}
-                <div className="absolute inset-0 bg-gray-900" />
+                <div className="absolute inset-0 bg-black !opacity-100" />
 
                 <div className="relative flex justify-end p-6 z-10">
                     <button
